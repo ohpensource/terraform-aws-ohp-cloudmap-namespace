@@ -51,7 +51,6 @@ resource "aws_iam_role_policy" "iam_read_write_policy" {
 resource "aws_iam_role" "iam_read_write_role" {
   count = var.create_iam_read_write_role ? 1 : 0
   name = "cloudmap-read-write-${var.name}"
-  tags = var.tags
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -64,7 +63,5 @@ resource "aws_iam_role" "iam_read_write_role" {
       }
     ]
   })
-  inline_policy {
-    name = "http-read-only-${var.name}"
-  }
+  tags = var.tags
 }
