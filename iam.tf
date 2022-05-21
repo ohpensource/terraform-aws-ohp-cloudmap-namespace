@@ -1,5 +1,5 @@
 resource "aws_iam_role_policy" "iam_read_only_policy" {
-  count = var.create_iam_read_write_role ? 1 : 0
+  count = var.create_iam_read_only_role ? 1 : 0
   name = "cloudmap-read-only-${var.name}-policy"
   policy = jsonencode({
     Version = "2012-10-17"
