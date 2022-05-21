@@ -34,7 +34,7 @@ resource "aws_iam_role" "iam_read_only_role" {
 
 resource "aws_iam_role_policy" "iam_read_write_policy" {
   count  = var.create_iam_read_write_role ? 1 : 0
-  name   = "cloudmap-read-only-${var.name}-policy"
+  name   = "cloudmap-read-write-${var.name}-policy"
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
