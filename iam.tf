@@ -45,7 +45,7 @@ resource "aws_iam_role_policy" "iam_read_write_policy" {
       },
     ]
   })
-  role   = aws_iam_role.iam_read_only_role[0].id
+  role   = aws_iam_role.iam_read_write_role[0].id
 }
 
 resource "aws_iam_role" "iam_read_write_role" {
