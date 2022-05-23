@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ohpensource/platform-cicd/actions/terraform/tfm-validate@2.15.0.1
+      - uses: ohpensource/platform-cicd/actions/terraform/tfm-validate@8.0.0.0
         name: validate-terraform
         with:
           terraform-folder: "./"
