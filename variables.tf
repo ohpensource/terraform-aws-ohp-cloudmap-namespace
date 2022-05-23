@@ -10,12 +10,12 @@ variable "namespace_type" {
 
 variable "name" {
   type        = string
-  description = "Namespace name"
+  description = "(Required) Namespace name"
 }
 
 variable "description" {
   type        = string
-  description = "Namespace description"
+  description = "(Required) Namespace description"
 }
 
 variable "allowed_read_only_account_ids" {
@@ -50,6 +50,6 @@ variable "vpc_id" {
 
 variable "tags" {
   type        = map(any)
-  description = "(Required) Map of tags to apply to repository"
+  description = "Map of tags to apply to repository"
   default     = {}
 }
