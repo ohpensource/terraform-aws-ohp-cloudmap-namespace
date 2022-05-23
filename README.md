@@ -1,6 +1,9 @@
 # terraform-aws-ohp-cloudmap-namespace
 Repository for CloudMap namespace Terraform module
 
+## Usage
+TODO
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
