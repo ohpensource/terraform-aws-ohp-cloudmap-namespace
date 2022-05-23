@@ -5,7 +5,17 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    assignees:
+      - "ohpensource/platform"
+    commit-message:
+      prefix: "fix: LANZ-0"
+      include: scope
   - package-ecosystem: "terraform"
-    directory: "/"
+    directory: "."
     schedule:
       interval: "daily"
+    assignees:
+      - "ohpensource/platform"
+    commit-message:
+      prefix: "fix: LANZ-0"
+      include: scope
