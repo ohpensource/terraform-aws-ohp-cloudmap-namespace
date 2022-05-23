@@ -46,3 +46,35 @@ jobs:
         with:
           script: |
               core.setFailed('Include documentation in the README.md file!')
+
+  validate-iac:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ohpensource/platform-cicd/actions/terraform/tfm-validate@2.15.0.1
+        name: validate-terraform
+        with:
+          terraform-folder: "./"
+          use-backend: "false"
+
+  validate-security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: aquasecurity/tfsec-action@v1.0.2
+        name: analyse-security
+
+  tfm-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - name: Render terraform docs inside the USAGE.md and push changes back to PR branch
+        uses: terraform-docs/gh-actions@v1.0.0
+        with:
+          working-dir: .
+          git-commit-message: "[tfm-docs][skip ci] - updating terraform docs"
+          output-file: README.md
+          output-method: inject
+          git-push: "true"
