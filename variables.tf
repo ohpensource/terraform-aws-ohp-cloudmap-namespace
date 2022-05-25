@@ -1,6 +1,6 @@
 variable "namespace_type" {
   type = string
-  description = "(Required) Type of namespace"
+  description = "(Required) Type of namespace - testiiing"
 
   validation {
     condition     = contains(["http", "private_dns", "public_dns"], var.namespace_type)
