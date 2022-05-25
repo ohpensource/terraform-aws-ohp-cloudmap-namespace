@@ -2,7 +2,7 @@
 Repository for CloudMap namespace Terraform module
 
 ## Usage
-TODO
+TODO:
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
