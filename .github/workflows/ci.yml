@@ -33,8 +33,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ohpensource/platform-cicd/actions/terraform/tfm-validate@2.15.0.1
-        name: validate-terraform
+      - name: validate-terraform
+        uses: ohpensource/terraform-validate-gh-action/action@0.0.0.1
         with:
           terraform-folder: "./"
           use-backend: "false"
