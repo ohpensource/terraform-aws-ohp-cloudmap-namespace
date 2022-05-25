@@ -4,6 +4,7 @@ locals {
     private_dns = one(aws_service_discovery_private_dns_namespace.namespace)
     public_dns = one(aws_service_discovery_public_dns_namespace.namespace)
   }
+  description = var.description != "" ? var.description : "${var.name} - ${var.namespace_type} namespace"
 }
 
 locals {
