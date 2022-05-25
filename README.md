@@ -40,7 +40,7 @@ No modules.
 | <a name="input_allowed_read_write_account_ids"></a> [allowed\_read\_write\_account\_ids](#input\_allowed\_read\_write\_account\_ids) | List of account IDs that should be able to update cloudmap namespace | `list(string)` | `[]` | no |
 | <a name="input_create_iam_read_only_role"></a> [create\_iam\_read\_only\_role](#input\_create\_iam\_read\_only\_role) | Create namespace read-only role | `bool` | `false` | no |
 | <a name="input_create_iam_read_write_role"></a> [create\_iam\_read\_write\_role](#input\_create\_iam\_read\_write\_role) | Create namespace read-write role | `bool` | `false` | no |
-| <a name="input_description"></a> [description](#input\_description) | (Required) Namespace description | `string` | n/a | yes |
+| <a name="input_description"></a> [description](#input\_description) | Namespace description | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | (Required) Namespace name | `string` | n/a | yes |
 | <a name="input_namespace_type"></a> [namespace\_type](#input\_namespace\_type) | (Required) Type of namespace | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Map of tags to apply to repository | `map(any)` | `{}` | no |
