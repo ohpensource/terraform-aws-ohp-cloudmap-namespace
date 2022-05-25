@@ -15,7 +15,8 @@ variable "name" {
 
 variable "description" {
   type        = string
-  description = "(Required) Namespace description"
+  description = "Namespace description"
+  default = ""
 }
 
 variable "allowed_read_only_account_ids" {
