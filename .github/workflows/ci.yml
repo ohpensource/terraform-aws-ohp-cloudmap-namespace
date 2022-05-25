@@ -2,6 +2,8 @@ name: continuous-integration
 on:
   pull_request:
     branches: [main]
+  push:
+    branches-ignore: [main]
 
 jobs:
 
