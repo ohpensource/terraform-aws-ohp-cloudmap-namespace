@@ -1,3 +1,9 @@
+# :confetti_ball: 0.3.0 (2022-05-26T07:22:56.394Z)
+- - -
+## :hammer: Features
+* LANZ-2500 Make description optional (#20)
+- - -
+- - -
 # :confetti_ball: 0.2.0 (2022-05-24T12:14:20.509Z)
 - - -
 ## :hammer: Features
