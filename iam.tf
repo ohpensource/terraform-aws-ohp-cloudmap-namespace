@@ -1,5 +1,4 @@
-resource "aws_iam_role_policy" "iam_read_only_policy" {
-  count = var.create_iam_read_only_role ? 1 : 0
+resource "aws_iam_policy" "iam_read_only_policy" {
   name = "cloudmap-read-only-${var.name}-policy"
   policy = jsonencode({
     Version = "2012-10-17"
@@ -8,10 +7,10 @@ resource "aws_iam_role_policy" "iam_read_only_policy" {
         Action = local.iam_read_only_actions
         Effect = "Allow"
         Resource = "*"
-      },
+      }
     ]
   })
-  role = aws_iam_role.iam_read_only_role[0].id
+  tags = var.tags
 }
 
 resource "aws_iam_role" "iam_read_only_role" {
@@ -29,12 +28,12 @@ resource "aws_iam_role" "iam_read_only_role" {
       }
     ]
   })
+  managed_policy_arns = [aws_iam_policy.iam_read_only_policy.arn]
   tags = var.tags
 }
 
-resource "aws_iam_role_policy" "iam_read_write_policy" {
-  count  = var.create_iam_read_write_role ? 1 : 0
-  name   = "cloudmap-read-write-${var.name}-policy"
+resource "aws_iam_policy" "iam_read_write_policy" {
+  name = "cloudmap-read-write-${var.name}-policy"
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -45,7 +44,7 @@ resource "aws_iam_role_policy" "iam_read_write_policy" {
       },
     ]
   })
-  role   = aws_iam_role.iam_read_write_role[0].id
+  tags = var.tags
 }
 
 resource "aws_iam_role" "iam_read_write_role" {
@@ -63,5 +62,6 @@ resource "aws_iam_role" "iam_read_write_role" {
       }
     ]
   })
+  managed_policy_arns = [aws_iam_policy.iam_read_write_policy.arn]
   tags = var.tags
 }
