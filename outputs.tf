@@ -1,9 +1,9 @@
 output "namespace_id" {
-  value = try(lookup(local.created_namespace, var.namespace_type).id, null)
+  value = try(lookup(local.created_namespace, var.type).id, null)
 }
 
 output "namespace_arn" {
-  value = try(lookup(local.created_namespace, var.namespace_type).arn, null)
+  value = try(lookup(local.created_namespace, var.type).arn, null)
 }
 
 output "namespace_name" {
@@ -11,7 +11,7 @@ output "namespace_name" {
 }
 
 output "namespace_hosted_zone_id" {
-  value = try(lookup(local.created_namespace, var.namespace_type).hosted_zone, null)
+  value = try(lookup(local.created_namespace, var.type).hosted_zone, null)
 }
 
 output "iam_read_only_policy_arn" {

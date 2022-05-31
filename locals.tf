@@ -4,7 +4,7 @@ locals {
     private_dns = one(aws_service_discovery_private_dns_namespace.namespace)
     public_dns = one(aws_service_discovery_public_dns_namespace.namespace)
   }
-  description = var.description != "" ? var.description : "${var.name} - ${var.namespace_type} namespace"
+  description = var.description != "" ? var.description : "${var.name} - ${var.type} namespace"
 }
 
 locals {
@@ -27,7 +27,7 @@ locals {
   ]
   iam_read_only_actions = concat(
     local.iam_read_only_http_actions,
-    var.namespace_type == "private_dns" || var.namespace_type == "public_dns" ? local.iam_read_only_dns_actions : []
+    var.type == "private_dns" || var.type == "public_dns" ? local.iam_read_only_dns_actions : []
   )
 }
 
@@ -64,6 +64,6 @@ locals {
   ]
   iam_read_write_actions = concat(
     local.iam_read_write_http_actions,
-    var.namespace_type == "private_dns" || var.namespace_type == "public_dns" ? local.iam_read_write_dns_actions : []
+    var.type == "private_dns" || var.type == "public_dns" ? local.iam_read_write_dns_actions : []
   )
 }
