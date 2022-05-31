@@ -54,3 +54,15 @@ variable "tags" {
   description = "Map of tags to apply to repository"
   default     = {}
 }
+
+variable "create_ssm_parameters" {
+  type        = bool
+  description = "Create SSM parameters with resource output values"
+  default     = false
+}
+
+variable "ssm_parameter_prefix" {
+  type        = string
+  description = "Prefix for SSM parameters"
+  default     = ""
+}
