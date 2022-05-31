@@ -1,3 +1,9 @@
+# :confetti_ball: 0.4.0 (2022-05-31T07:00:17.300Z)
+- - -
+## :hammer: Features
+* LANZ-2500 Add and expose read and write policies (#21)
+- - -
+- - -
 # :confetti_ball: 0.3.0 (2022-05-26T07:22:56.394Z)
 - - -
 ## :hammer: Features
