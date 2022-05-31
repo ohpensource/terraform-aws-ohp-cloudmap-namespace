@@ -23,10 +23,10 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [aws_iam_policy.iam_read_only_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
+| [aws_iam_policy.iam_read_write_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
 | [aws_iam_role.iam_read_only_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_role.iam_read_write_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
-| [aws_iam_role_policy.iam_read_only_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
-| [aws_iam_role_policy.iam_read_write_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 | [aws_service_discovery_http_namespace.namespace](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/service_discovery_http_namespace) | resource |
 | [aws_service_discovery_private_dns_namespace.namespace](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/service_discovery_private_dns_namespace) | resource |
 | [aws_service_discovery_public_dns_namespace.namespace](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/service_discovery_public_dns_namespace) | resource |
@@ -50,9 +50,12 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_iam_read_only_policy_arn"></a> [iam\_read\_only\_policy\_arn](#output\_iam\_read\_only\_policy\_arn) | n/a |
 | <a name="output_iam_read_only_role_arn"></a> [iam\_read\_only\_role\_arn](#output\_iam\_read\_only\_role\_arn) | n/a |
+| <a name="output_iam_read_write_policy_arn"></a> [iam\_read\_write\_policy\_arn](#output\_iam\_read\_write\_policy\_arn) | n/a |
 | <a name="output_iam_read_write_role_arn"></a> [iam\_read\_write\_role\_arn](#output\_iam\_read\_write\_role\_arn) | n/a |
 | <a name="output_namespace_arn"></a> [namespace\_arn](#output\_namespace\_arn) | n/a |
 | <a name="output_namespace_hosted_zone_id"></a> [namespace\_hosted\_zone\_id](#output\_namespace\_hosted\_zone\_id) | n/a |
 | <a name="output_namespace_id"></a> [namespace\_id](#output\_namespace\_id) | n/a |
+| <a name="output_namespace_name"></a> [namespace\_name](#output\_namespace\_name) | n/a |
 <!-- END_TF_DOCS -->
