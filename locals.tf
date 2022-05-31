@@ -5,6 +5,7 @@ locals {
     public_dns = one(aws_service_discovery_public_dns_namespace.namespace)
   }
   description = var.description != "" ? var.description : "${var.name} - ${var.type} namespace"
+  hosted_zone_created = var.type == "private_dns" || var.type == "public_dns" ? true : false
 }
 
 locals {

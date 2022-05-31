@@ -21,7 +21,7 @@ resource "aws_ssm_parameter" "namespace_name" {
 }
 
 resource "aws_ssm_parameter" "namespace_hosted_zone_id" {
-  count = var.create_ssm_parameters && (try(lookup(local.created_namespace, var.type).hosted_zone, null) != null) ? 1 : 0
+  count = var.create_ssm_parameters && local.hosted_zone_created ? 1 : 0
   name  = "${var.ssm_parameter_prefix}/cloudmap/hostedzone/id"
   type  = "String"
   value = lookup(local.created_namespace, var.type).hosted_zone
