@@ -45,7 +45,7 @@ variable "create_iam_read_write_role" {
 
 variable "vpc_id" {
   type        = string
-  description = "VPC ID of namespace (necessary if private DNS namespace)"
+  description = "(Required if private DNS namespace) VPC ID of namespace"
   default     = ""
 }
 
