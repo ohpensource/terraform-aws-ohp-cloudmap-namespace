@@ -1,3 +1,9 @@
+# :confetti_ball: 0.6.0 (2022-06-01T11:28:55.043Z)
+- - -
+## :hammer: Features
+* LANZ-2500 Add stage variable (#23)
+- - -
+- - -
 # :confetti_ball: 0.5.0 (2022-06-01T07:03:56.838Z)
 - - -
 ## :hammer: Features
