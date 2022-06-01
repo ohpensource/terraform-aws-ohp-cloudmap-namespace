@@ -63,6 +63,12 @@ variable "create_ssm_parameters" {
 
 variable "ssm_parameter_prefix" {
   type        = string
-  description = "Prefix for SSM parameters"
+  description = "Prefix for SSM parameters. Must start with /"
+  default     = ""
+}
+
+variable "stage" {
+  type        = string
+  description = "Extra information about deployment of namespace, e.g. dev, tst, production"
   default     = ""
 }
