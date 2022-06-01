@@ -10,7 +10,7 @@ resource "aws_ssm_parameter" "namespace_arn" {
   count = var.create_ssm_parameters ? 1 : 0
   name  = "${local.ssm_parameter_prefix}/cloudmap/namespace/arn"
   type  = "String"
-  value =  lookup(local.created_namespace, var.type).arn
+  value = lookup(local.created_namespace, var.type).arn
   tags  = var.tags
 }
 
