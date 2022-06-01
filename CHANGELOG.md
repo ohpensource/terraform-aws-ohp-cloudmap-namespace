@@ -1,3 +1,11 @@
+# :confetti_ball: 0.5.0 (2022-06-01T07:03:56.838Z)
+- - -
+## :hammer: Features
+* LANZ-2500 Add ssm parameters
+* LANZ-2500 Rename namespace_type variable
+* LANZ-2500 Update condition for hosted zone SSM parameter
+- - -
+- - -
 # :confetti_ball: 0.4.0 (2022-05-31T07:00:17.300Z)
 - - -
 ## :hammer: Features
