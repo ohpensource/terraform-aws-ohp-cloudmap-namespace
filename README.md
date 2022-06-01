@@ -30,6 +30,14 @@ No modules.
 | [aws_service_discovery_http_namespace.namespace](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/service_discovery_http_namespace) | resource |
 | [aws_service_discovery_private_dns_namespace.namespace](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/service_discovery_private_dns_namespace) | resource |
 | [aws_service_discovery_public_dns_namespace.namespace](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/service_discovery_public_dns_namespace) | resource |
+| [aws_ssm_parameter.iam_read_only_policy_arn](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
+| [aws_ssm_parameter.iam_read_only_role_arn](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
+| [aws_ssm_parameter.iam_read_write_policy_arn](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
+| [aws_ssm_parameter.iam_read_write_role_arn](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
+| [aws_ssm_parameter.namespace_arn](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
+| [aws_ssm_parameter.namespace_hosted_zone_id](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
+| [aws_ssm_parameter.namespace_id](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
+| [aws_ssm_parameter.namespace_name](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
 | [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
 
 ## Inputs
@@ -40,10 +48,12 @@ No modules.
 | <a name="input_allowed_read_write_account_ids"></a> [allowed\_read\_write\_account\_ids](#input\_allowed\_read\_write\_account\_ids) | List of account IDs that should be able to update cloudmap namespace | `list(string)` | `[]` | no |
 | <a name="input_create_iam_read_only_role"></a> [create\_iam\_read\_only\_role](#input\_create\_iam\_read\_only\_role) | Create namespace read-only role | `bool` | `false` | no |
 | <a name="input_create_iam_read_write_role"></a> [create\_iam\_read\_write\_role](#input\_create\_iam\_read\_write\_role) | Create namespace read-write role | `bool` | `false` | no |
+| <a name="input_create_ssm_parameters"></a> [create\_ssm\_parameters](#input\_create\_ssm\_parameters) | Create SSM parameters with resource output values | `bool` | `false` | no |
 | <a name="input_description"></a> [description](#input\_description) | Namespace description | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | (Required) Namespace name | `string` | n/a | yes |
-| <a name="input_namespace_type"></a> [namespace\_type](#input\_namespace\_type) | (Required) Type of namespace | `string` | n/a | yes |
+| <a name="input_ssm_parameter_prefix"></a> [ssm\_parameter\_prefix](#input\_ssm\_parameter\_prefix) | Prefix for SSM parameters | `string` | `""` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Map of tags to apply to repository | `map(any)` | `{}` | no |
+| <a name="input_type"></a> [type](#input\_type) | (Required) Type of namespace | `string` | n/a | yes |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | VPC ID of namespace (necessary if private DNS namespace) | `string` | `""` | no |
 
 ## Outputs
