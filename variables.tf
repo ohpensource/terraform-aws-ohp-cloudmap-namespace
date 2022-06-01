@@ -1,10 +1,10 @@
-variable "namespace_type" {
+variable "type" {
   type = string
   description = "(Required) Type of namespace"
 
   validation {
-    condition     = contains(["http", "private_dns", "public_dns"], var.namespace_type)
-    error_message = "The namespace_type must be one of http, private_dns, public_dns."
+    condition     = contains(["http", "private_dns", "public_dns"], var.type)
+    error_message = "The type must be one of http, private_dns, public_dns."
   }
 }
 
@@ -53,4 +53,16 @@ variable "tags" {
   type        = map(any)
   description = "Map of tags to apply to repository"
   default     = {}
+}
+
+variable "create_ssm_parameters" {
+  type        = bool
+  description = "Create SSM parameters with resource output values"
+  default     = false
+}
+
+variable "ssm_parameter_prefix" {
+  type        = string
+  description = "Prefix for SSM parameters"
+  default     = ""
 }
