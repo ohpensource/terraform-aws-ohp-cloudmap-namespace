@@ -124,7 +124,7 @@ No modules.
 | <a name="input_stage"></a> [stage](#input\_stage) | Extra information about deployment of namespace, e.g. dev, tst, production | `string` | `""` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Map of tags to apply to repository | `map(any)` | `{}` | no |
 | <a name="input_type"></a> [type](#input\_type) | (Required) Type of namespace | `string` | n/a | yes |
-| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | VPC ID of namespace (necessary if private DNS namespace) | `string` | `""` | no |
+| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | (Required if private DNS namespace) VPC ID of namespace | `string` | `""` | no |
 
 ## Outputs
 
