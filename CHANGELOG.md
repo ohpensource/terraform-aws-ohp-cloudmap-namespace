@@ -1,3 +1,13 @@
+# :confetti_ball: 0.7.0 (2022-06-02T10:00:49.880Z)
+- - -
+## :hammer: Features
+* LANZ-2502 Add documentation
+## :bug: Fixes
+* LANZ-2500 Add missing tags
+## :newspaper: Others
+* refactor: LANZ-2500 Remove space
+- - -
+- - -
 # :confetti_ball: 0.6.0 (2022-06-01T11:28:55.043Z)
 - - -
 ## :hammer: Features
