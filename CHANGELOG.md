@@ -1,3 +1,9 @@
+# :confetti_ball: 0.7.1 (2022-06-09T12:45:35.639Z)
+- - -
+## :bug: Fixes
+* LANZ-2758 Fix jira-tickets-commits job (#27)
+- - -
+- - -
 # :confetti_ball: 0.7.0 (2022-06-02T10:00:49.880Z)
 - - -
 ## :hammer: Features
