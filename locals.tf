@@ -6,7 +6,7 @@ locals {
   }
   description = var.description != "" ? var.description : "${var.name} - ${var.type} namespace"
   hosted_zone_created = var.type == "private_dns" || var.type == "public_dns" ? true : false
-  ssm_parameter_prefix = var.stage != "" ? "${var.ssm_parameter_prefix}/${var.stage}" : var.ssm_parameter_prefix
+  ssm_parameter_prefix = var.stage != "" && var.deployment != "" ? "/${var.stage}/${var.deployment}" : var.ssm_parameter_prefix
 }
 
 locals {

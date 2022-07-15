@@ -1,5 +1,5 @@
 variable "type" {
-  type = string
+  type        = string
   description = "(Required) Type of namespace"
 
   validation {
@@ -16,7 +16,7 @@ variable "name" {
 variable "description" {
   type        = string
   description = "Namespace description"
-  default = ""
+  default     = ""
 }
 
 variable "allowed_read_only_account_ids" {
@@ -63,12 +63,18 @@ variable "create_ssm_parameters" {
 
 variable "ssm_parameter_prefix" {
   type        = string
-  description = "Prefix for SSM parameters. Must start with /"
+  description = "Prefix for SSM parameters. Must start with /. If both stage and deployment are set, /stage/deployment will be used as prefix instead"
   default     = ""
 }
 
 variable "stage" {
   type        = string
-  description = "Extra information about deployment of namespace, e.g. dev, tst, production"
+  description = "Extra information about stage of namespace, e.g. dev, tst, production"
+  default     = ""
+}
+
+variable "deployment" {
+  type        = string
+  description = "Extra information about deployment of namespace in a stage, e.g. main, default, a, b, c"
   default     = ""
 }
