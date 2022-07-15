@@ -8,7 +8,7 @@ updates:
     assignees:
       - "ohpensource/platform"
     commit-message:
-      prefix: "fix: LANZ-0"
+      prefix: "chore: LANZ-0"
       include: scope
   - package-ecosystem: "terraform"
     directory: "."
