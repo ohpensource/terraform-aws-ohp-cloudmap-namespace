@@ -60,7 +60,7 @@ By default, the following resources will be created:
 ### Enable SSM parameters
 Want to expose the outputs of this module as SSM parameters?
 Set **create_ssm_parameters** to **true**.  
-Optionally construct a custom SSM parameter prefix by setting **ssm_parameter_prefix** and/or **stage** variables.
+Optionally construct a custom SSM parameter prefix by setting **ssm_parameter_prefix** or **stage** and **deployment** variables.
 
 ### Create cross-account IAM roles
 Do you need cross-account access to your namespaces?  
