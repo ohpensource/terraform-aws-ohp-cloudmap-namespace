@@ -118,10 +118,11 @@ No modules.
 | <a name="input_create_iam_read_only_role"></a> [create\_iam\_read\_only\_role](#input\_create\_iam\_read\_only\_role) | Create namespace read-only role | `bool` | `false` | no |
 | <a name="input_create_iam_read_write_role"></a> [create\_iam\_read\_write\_role](#input\_create\_iam\_read\_write\_role) | Create namespace read-write role | `bool` | `false` | no |
 | <a name="input_create_ssm_parameters"></a> [create\_ssm\_parameters](#input\_create\_ssm\_parameters) | Create SSM parameters with resource output values | `bool` | `false` | no |
+| <a name="input_deployment"></a> [deployment](#input\_deployment) | Extra information about deployment of namespace in a stage, e.g. main, default, a, b, c | `string` | `""` | no |
 | <a name="input_description"></a> [description](#input\_description) | Namespace description | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | (Required) Namespace name | `string` | n/a | yes |
-| <a name="input_ssm_parameter_prefix"></a> [ssm\_parameter\_prefix](#input\_ssm\_parameter\_prefix) | Prefix for SSM parameters. Must start with / | `string` | `""` | no |
-| <a name="input_stage"></a> [stage](#input\_stage) | Extra information about deployment of namespace, e.g. dev, tst, production | `string` | `""` | no |
+| <a name="input_ssm_parameter_prefix"></a> [ssm\_parameter\_prefix](#input\_ssm\_parameter\_prefix) | Prefix for SSM parameters. Must start with /. If both stage and deployment are set, /stage/deployment will be used as prefix instead | `string` | `""` | no |
+| <a name="input_stage"></a> [stage](#input\_stage) | Extra information about stage of namespace, e.g. dev, tst, production | `string` | `""` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Map of tags to apply to repository | `map(any)` | `{}` | no |
 | <a name="input_type"></a> [type](#input\_type) | (Required) Type of namespace | `string` | n/a | yes |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | (Required if private DNS namespace) VPC ID of namespace | `string` | `""` | no |
