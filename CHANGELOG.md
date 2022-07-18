@@ -1,3 +1,12 @@
+# :confetti_ball: 0.8.0 (2022-07-18T12:55:14.712Z)
+- - -
+## :hammer: Features
+* LANZ-2911 Update ssm parameter creation
+## :newspaper: Others
+* chore: LANZ-2911 Add gitignore
+* chore: LANZ-2911 Update dependabot
+- - -
+- - -
 # :confetti_ball: 0.7.1 (2022-06-09T12:45:35.639Z)
 - - -
 ## :bug: Fixes
