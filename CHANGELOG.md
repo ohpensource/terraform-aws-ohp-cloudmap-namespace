@@ -1,3 +1,9 @@
+# :confetti_ball: 0.8.1 (2023-06-22T06:48:28.002Z)
+- - -
+## :newspaper: Others
+* chore: LANZ-3974 add baseline tags (#48)
+- - -
+- - -
 # :confetti_ball: 0.8.0 (2022-07-18T12:55:14.712Z)
 - - -
 ## :hammer: Features
