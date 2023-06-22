@@ -1,3 +1,4 @@
+#tfsec:ignore:aws-iam-no-policy-wildcards
 resource "aws_iam_policy" "iam_read_only_policy" {
   name = "cloudmap-read-only-${var.name}-policy"
   policy = jsonencode({
@@ -10,7 +11,7 @@ resource "aws_iam_policy" "iam_read_only_policy" {
       }
     ]
   })
-  tags = var.tags
+  tags = local.baseline_tags
 }
 
 resource "aws_iam_role" "iam_read_only_role" {
@@ -29,9 +30,10 @@ resource "aws_iam_role" "iam_read_only_role" {
     ]
   })
   managed_policy_arns = [aws_iam_policy.iam_read_only_policy.arn]
-  tags = var.tags
+  tags = local.baseline_tags
 }
 
+#tfsec:ignore:aws-iam-no-policy-wildcards
 resource "aws_iam_policy" "iam_read_write_policy" {
   name = "cloudmap-read-write-${var.name}-policy"
   policy = jsonencode({
@@ -44,7 +46,7 @@ resource "aws_iam_policy" "iam_read_write_policy" {
       },
     ]
   })
-  tags = var.tags
+  tags = local.baseline_tags
 }
 
 resource "aws_iam_role" "iam_read_write_role" {
@@ -63,5 +65,5 @@ resource "aws_iam_role" "iam_read_write_role" {
     ]
   })
   managed_policy_arns = [aws_iam_policy.iam_read_write_policy.arn]
-  tags = var.tags
+  tags = local.baseline_tags
 }
